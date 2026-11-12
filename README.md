@@ -23,7 +23,7 @@
 
 ## 安装
 
-本仓库目前为私有，安装者需要仓库读取权限；登录网页不等于终端已具备 Git 访问权限。
+本仓库公开可读，拉取与安装不需要协作者邀请。推送修改仍需要相应权限。
 
 在支持 Skill Installer 的 Codex 中发送：
 
@@ -32,10 +32,10 @@
 https://github.com/xgyygx/codex-not-so-slow/tree/main/skills/codex-session-image-repair
 ```
 
-或先用已有 GitHub SSH 认证克隆，再复制到个人 Skills 目录（已有安装时先比较、备份，不直接覆盖）：
+或通过 HTTPS 克隆，再复制到个人 Skills 目录（已有安装时先比较、备份，不直接覆盖）：
 
 ```bash
-git clone git@github.com:xgyygx/codex-not-so-slow.git
+git clone https://github.com/xgyygx/codex-not-so-slow.git
 DEST="${CODEX_HOME:-$HOME/.codex}/skills/codex-session-image-repair"
 if [ -e "$DEST" ]; then
   printf '%s\n' 'Existing skill found: compare and back it up before updating.'
